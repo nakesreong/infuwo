@@ -230,8 +230,10 @@ function renderFootnotes() {
     Object.entries(notes).forEach(([id, text]) => {
         const li = document.createElement('li');
         li.id = `ftn${id}`;
+        // Remove leading duplicate [id] from the footnote text
+        const cleanText = text.replace(new RegExp(`^\\s*\\[${id}\\]\\s*`), '');
         li.innerHTML = `
-            <strong>[${id}]</strong> ${text}
+            <strong>[${id}]</strong> ${cleanText}
             <a href="#ref${id}" class="back-link" title="Назад к тексту">↩</a>
         `;
         footnotesList.appendChild(li);
