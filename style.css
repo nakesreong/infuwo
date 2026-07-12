@@ -271,13 +271,20 @@ body.light-theme .icon-dark {
     gap: 1rem;
 }
 
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
 .chapter-nav h3 {
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--accent);
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
 }
 
 .chapter-nav ul {
@@ -689,50 +696,43 @@ body.light-theme .footnotes-section li:hover {
 
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-        padding: 1rem;
-        gap: 1rem;
+        padding: 0.6rem 1rem;
+        gap: 0.5rem;
+        text-align: left;
     }
     
     .branding {
-        flex-direction: column;
-        gap: 0.4rem;
-    }
-    
-    .logo-icon {
-        font-size: 2rem;
+        flex-direction: row;
+        gap: 0.5rem;
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     
     .subtitle {
-        font-size: 0.75rem;
-        line-height: 1.4;
-        max-width: 90%;
-        margin: 0.2rem auto 0;
+        display: none; /* Hide long subtitle on mobile to save vertical space */
     }
     
     .controls {
-        flex-direction: column;
-        gap: 0.8rem;
-        width: 100%;
+        flex-direction: row;
+        gap: 0.5rem;
+        width: auto;
         align-items: center;
     }
     
     .view-selector {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-end;
     }
     
     .btn-toggle {
-        padding: 0.4rem 0.8rem;
+        padding: 0.35rem 0.6rem;
         font-size: 0.75rem;
-        flex-grow: 1;
-        text-align: center;
+        flex-grow: 0;
     }
     
     .main-container {
