@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инь Фу Во. Суждения об информационной безопасности | Yin Fu Wo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Суждения об информационной безопасности мудреца и учителя Инь Фу Во, записанные его учениками. Автор: Николай Федотов. Полная русская версия и художественный английский перевод.">
+    <meta name="keywords" content="Инь Фу Во, InfoWatch, суждения по безопасности, Николай Федотов, информационная безопасность, притчи ИБ, Yinfujing, Yin Fu Wo, cybersecurity parables">
+    <meta name="author" content="Николай Федотов, перевод: Gemini">
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Инь Фу Во. Суждения об информационной безопасности">
+    <meta property="og:description" content="Полная коллекция притч мудреца Инь Фу Во с переводом на английский язык. Жемчужина ИБ-философии, возвращенная из веб-архива.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nakesreong.github.io/infuwo/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐯</text></svg>">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Суждения об информационной безопасности мудреца и учителя Инь Фу Во",
+      "alternateName": "Yin Fu Wo: Judgments on Information Security",
+      "author": {
+        "@type": "Person",
+        "name": "Николай Федотов"
+      },
+      "translator": {
+        "@type": "Organization",
+        "name": "Gemini (AI)"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "InfoWatch (original)"
+      },
+      "datePublished": "2009",
+      "inLanguage": ["ru", "en"],
+      "description": "Суждения об информационной безопасности мудреца и учителя Инь Фу Во, записанные его учениками. Коллекция философских притч об ИБ."
+    }
+    </script>
+</head>
+<body class="dark-theme">
+    <div class="background-decor">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="branding">
+                <span class="logo-icon">🐯</span>
+                <div>
+                    <h1 id="site-title-ru">Инь Фу Во</h1>
+                    <h1 id="site-title-en" class="hidden">Yin Fu Wo</h1>
+                    <p class="subtitle" id="site-subtitle">Суждения об информационной безопасности / Judgments on Information Security</p>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
+                    <span class="icon-dark">🌙</span>
+                    <span class="icon-light">☀️</span>
+                </button>
+                
+                <!-- View Selector -->
+                <div class="view-selector">
+                    <button class="btn-toggle active" data-lang="ru">RU</button>
+                    <button class="btn-toggle" data-lang="en">EN</button>
+                    <button class="btn-toggle" data-lang="both">RU &amp; EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="chapter-nav">
+                <h3 id="nav-title">Содержание</h3>
+                <ul id="chapter-list">
+                    <!-- Chapters will be rendered dynamically -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Search & Filters -->
+            <div class="search-box glass-panel">
+                <input type="text" id="search-input" placeholder="Поиск притч (например, пароль или VPN)..." aria-label="Search">
+                <span class="search-icon">🔍</span>
+                <button id="clear-search" class="hidden">✕</button>
+            </div>
+
+            <!-- Parables List -->
+            <div id="parables-container">
+                <div class="loading">Загрузка мудрости...</div>
+            </div>
+            
+            <!-- Footnotes Panel -->
+            <section class="footnotes-section glass-panel" id="footnotes-panel">
+                <h3 id="footnotes-title">Примечания</h3>
+                <ul id="footnotes-list">
+                    <!-- Footnotes will be rendered dynamically -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© Н.Н. Федотов, 2009. Восстановлено из веб-архива.</p>
+            <p>Художественный перевод на английский: <span class="ai-badge">Gemini 3.5 Flash</span></p>
+            <p>Спутник выведен на орбиту вечности в 2026 году. 🌌</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for copying link -->
+    <div id="toast" class="toast hidden">Ссылка на притчу скопирована!</div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
